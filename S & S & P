@@ -1,42 +1,27 @@
 import random
+
 while True:
-    choices = ["rock","scissors","paper"]
-    computer = random.choice (choices)
+    choices = ["rock", "scissors", "paper"]
+    computer = random.choice(choices)
     player = None
+    
     while player not in choices:
-        player = input ("what is your choice ? ").lower()
+        player = input("What is your choice? ").lower()
+        
+    print("computer: ", computer)
+    print("player: ", player)
+    
     if player == computer:
-        print("computer : " , computer)
-        print("player : ",player)
         print("tie")
-    elif player == "rock":
-        if computer == "paper":
-            print("computer : " , computer)
-            print("player : ",player)
-            print("you lose")
-        if computer == "scissors":
-            print("computer : " , computer)
-            print("player : ",player)
-            print("you win") 
-    elif player == "scissors":
-        if computer == "rock":
-            print("computer : " , computer)
-            print("player : ",player)
-            print("you lose")
-        if computer == "paper":
-            print("computer : " , computer)
-            print("player : ",player)
-            print("you win")                   
-    elif player == "paper":
-        if computer == "scissors":
-            print("computer : " , computer)
-            print("player : ",player)
-            print("you lose")
-        if computer == "rock":
-            print("computer : " , computer)
-            print("player : ",player)
-            print("you win")
-    play_again = input("playe again? (yes/no) : ")
+    elif (player == "rock" and computer == "scissors") or (player == "scissors"
+     and computer == "paper") or (player == "paper" and computer == "rock"):
+        print("you win")
+    else:
+        print("you lose")
+        
+    play_again = input("Play again? (yes/no): ")
+    
     if play_again != "yes":
         break
-print("Bye")    
+
+print("Bye")
