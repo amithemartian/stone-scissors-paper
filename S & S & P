@@ -1,3 +1,6 @@
+# Rock-paper-scissors game
+# Choose rock, paper, or scissors and play against the computer
+
 import random
 
 while True:
@@ -8,20 +11,21 @@ while True:
     while player not in choices:
         player = input("What is your choice? ").lower()
         
-    print("computer: ", computer)
-    print("player: ", player)
+    print("computer: ", computer)   #ComputerChoice #RandomSelection
+    print("player: ", player)  #PlayerChoice #UserInput
     
     if player == computer:
-        print("tie")
+        print("tie")  # Hashtags: #Tie #Draw
     elif (player == "rock" and computer == "scissors") or (player == "scissors"
      and computer == "paper") or (player == "paper" and computer == "rock"):
-        print("you win")
+        print("you win")  #Win #Victory
     else:
-        print("you lose")
+        print("you lose") #Lose #Defeat
         
-    play_again = input("Play again? (yes/no): ")
+    play_again = input("Play again? (yes/no): ") #PlayAgain #UserPrompt
     
     if play_again != "yes":
         break
 
-print("Bye")
+print("Bye")  #ExitMessage
+
